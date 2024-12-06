@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo List</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      display: flex;
+      align-items: center;
+      margin: 5px 0;
+      justify-content: flex-start;
+      position: relative;
+    }
+
+    input[type="text"] {
+      margin-bottom: 10px;
+    }
+
+    .counter {
+      margin-bottom: 15px;
+    }
+
+    .todo-item {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      width: 100%;
+    }
+
+    .todo-text {
+      max-width: 200px;
+      word-wrap: break-word;
+      margin-left: 10px;
+      display: inline-block;
+      white-space: normal;
+    }
+
+    .todo-delete {
+      position: absolute;
+      left: 300px; 
+      white-space: nowrap;
+    }
+
+    button {
+      margin-left: 10px;
+      width: 80px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Todo List</h1>
+
+  <input type="text" id="todo-input" placeholder="Enter new todo">
+  <button onclick="newTodo()">Add</button>
+
+  <div class="counter">
+    <span id="total-tasks">Total tasks: 0</span>
+    <span id="in-progress">In progress: 0</span>
+  </div>
+
+  <ul id="todo-list"></ul>
+
+  <script src="script.js"></script>
+</body>
+</html>
